@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simplain</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" media="screen" type="text/css" href="https://fonts.googleapis.com/css?family=Walter+Turncoat">
+    <link rel="stylesheet" media="screen" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="mcontainer" class="container text-center">
+        <div class="col-xs-12">
+            <div class="jumbotron">
+                <h1 id="title" class="editable text-center">{{invite.title}}</h1>
+            </div>
+            <div class="small">An invite from: </div>
+            <h3 id="hostName" class="editable text-center">{{invite.hostName}}</h3>
+        </div>
+        <div class="col-xs-12 spacer">&nbsp;</div>
+        <div class="col-xs-12">
+            <p id="addrText" class="editable">{{invite.addrText}}</p>
+        </div>
+        <div class="col-xs-12 spacer">&nbsp;</div>
+        <div class="col-xs-12">
+            <span id="timeFrom" class="editable">{{invite.timeFromStr}}</span>
+            {{#invite.timeToStr}}
+            <span id="timeTo" class="editable"> to {{invite.timeToStr}}</span>
+            {{/invite.timeToStr}}
+        </div>
+        <div class="col-xs-12 spacer">&nbsp;</div>
+        <div class="col-xs-12">
+            <div id="inviteNote" class="editable">{{{invite.inviteNote}}}</div>
+        </div>
+        <div class="col-xs-12 spacer">&nbsp;</div>
+        <div class="col-xs-12">
+            {{#invite.photos.0}}
+            <div class="col-md-6 col-md-offset-3">
+                <img class="img-fluid img-thumbnail" src="{{invite.photos.0.url}}"></img>
+            </div>
+            {{/invite.photos.0}}
+        </div>
+    </div>
+
+    <script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js "></script>
+    <!-- NOT required while export -->
+    <script defer src="https://codepen.io/anandchakru/pen/KQxrLo.js"></script>
+</body>
+
+</html>

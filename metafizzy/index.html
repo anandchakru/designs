@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Metafizzy</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="mcontainer" class="container text-center">
+        <div class="grid" data-packery='{ "itemSelector": ".grid-item", "gutter": 100 }'>
+            <div class="grid-item" id="title">{{invite.title}}</div>
+            <div class="grid-item" id="hostName">
+                {{invite.hostName}}
+                <div class="caption">&nbsp; invites</div>
+            </div>
+            <div class="grid-item" id="addrText">{{invite.addrText}}</div>
+            <div class="grid-item" id="timeFrom">{{invite.timeFromStr}}</div>
+            <div class="grid-item" id="timeTo">{{#invite.timeToStr}} to {{invite.timeToStr}} {{/invite.timeToStr}}</div>
+            <div class="grid-item" id="inviteNote">{{{invite.inviteNote}}}</div>
+            <div class="grid-item" id="photo">{{#invite.photos.0}}
+                <img class="photo" src="{{invite.photos.0.url}}"></img>{{/invite.photos.0}}</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+
+    <!-- NOT required while export -->
+    <script defer src="https://codepen.io/anandchakru/pen/KQxrLo.js"></script>
+</body>
+
+</html>

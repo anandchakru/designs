@@ -1,0 +1,33 @@
+body{
+    padding: 10px;
+}
+.jumbotron{
+    background-color:transparent !important;
+  }
+.container{
+    background-color: #f13c20;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-shadow: 0 0 0 1px #f13c20, 1px 1px 6px 4px #727272;
+}
+#title{
+    color: #EFE2BA;
+    font-family: 'Berkshire Swash';
+}
+.caption{
+    font-size:94px;
+    font-family: 'Alegreya';
+    font-weight: bolder;
+    color: #d79922;
+    text-shadow: 10px 10px 20px #4056A1;
+}
+#hostName{
+    color: #EFE2BA;
+    font-family: 'Berkshire Swash';
+}
+p, span, #inviteNote, #inviteNote *{
+    color: #EFE2BA;
+    font-family: 'Serif';
+}
+.spacer{
+    padding: 25px 0;
+}

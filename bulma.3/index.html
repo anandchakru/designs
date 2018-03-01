@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Roboto|Berkshire+Swash">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://codepen.io/anandchakru/pen/KQxrLo.css">
+</head>
+
+<body>
+    <div id="mcontainer">
+        <section class="section" id="sectionCaption">
+            <div class="container has-text-centered">
+                <div class="content is-large">
+                    <h2 id="caption">{{#invite.shortMsg}}{{invite.shortMsg}}{{/invite.shortMsg}}{{^invite.shortMsg}}Join us{{/invite.shortMsg}}</h2>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="sectionTitle">
+            <div class="container has-text-centered">
+                <div class="content is-large">
+                    <h1 class="title editable" id="title">
+                        {{invite.title}}
+                    </h1>
+                    <h4 class="subtitle">
+                        <div id="hostName" class="editable">{{invite.hostName}}</div>
+                    </h4>
+                </div>
+            </div>
+        </section>
+        {{#invite.photos.0}}
+        <section class="section" id="sectionPhoto">
+            <div class="container has-text-centered">
+                <figure class="image">
+                    <img id="invitePhoto" class="photo" src="{{invite.photos.0.url}}">
+                </figure>
+            </div>
+        </section>
+        {{/invite.photos.0}}
+        <section class="section" id="sectionInviteNote">
+            <div class="content is-large editable" id="inviteNote">
+                <article class="media">
+                    <div class="media-content has-text-right">
+                        <div class="content">
+                            {{{invite.inviteNote}}}
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="sectionAddrText">
+            <div class="columns" id="addrText">
+                <div class="column is-full">
+                    <div class="card">
+                        <div class="card-image has-text-centered">
+                            <figure class="image">
+                                <i class="fas fa-2x fa-map-marker-alt faa-float animated"></i>
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 editable">{{invite.addrText}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns" id="timeFrom">
+                <div class="column is-full">
+                    <div class="card">
+                        <div class="card-image has-text-centered">
+                            <figure class="image">
+                                <i class="fas fa-2x fa-clock faa-burst animated"></i>
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4 editable">
+                                {{invite.timeFromStr}} {{#invite.timeToStr}}
+                                <span>&mdash;</span> {{invite.timeToStr}} {{/invite.timeToStr}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#mcontainer').fullpage({
+                sectionsColor: ['#F15A5A', '#F0C419', '#4EBA6F', '#2D95BF', '#955BA5']
+            });
+
+            $('#mcontainer').fadeIn();
+        });
+    </script>
+    <!-- NOT required while export -->
+    <script defer src="https://codepen.io/anandchakru/pen/KQxrLo.js"></script>
+</body>
+
+</html>

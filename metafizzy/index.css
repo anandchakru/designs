@@ -1,0 +1,23 @@
+.jumbotron{
+    background-color:transparent !important;
+  }
+.container{
+    background-color: #a52a2a;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#title{
+    color: #561010;
+    font-family: 'Berkshire Swash';
+}
+#hostName{
+    color: #561010;
+    font-family: 'Berkshire Swash';
+}
+p, span, #inviteNote, #inviteNote *{
+    color: #ffffff;
+}
+
+.spacer{
+    padding: 25px 0;
+}
+

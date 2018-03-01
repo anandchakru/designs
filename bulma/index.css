@@ -1,0 +1,25 @@
+.photo{
+    border-radius: 5px;
+  }
+#mcontainer{
+    background-color: #363636;
+}
+#title, #hostName{
+    color: #E8175D;
+    font-family: 'Roboto';
+}
+#caption{
+    padding: 50px;
+    color: #F7D969;
+    font-family: 'Satisfy';
+}
+#addrText, #timeFrom, #timeTo{
+    color: #F16A43;
+}
+#inviteNote, #inviteNote *{
+    color: #A2D4AB;
+    font-family: 'Roboto';
+}
+.box{
+    background: transparent;
+}
